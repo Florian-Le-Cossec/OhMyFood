@@ -19,7 +19,7 @@
         </h1>
     </header>
     <main>
-        <section>
+        <section class="input-section">
             <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Paris, Belleville" />
         </section>
@@ -28,27 +28,27 @@
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button>Explorer nos restaurants</button>
         </section>
-        <section>
+        <section class="functionning">
             <h2>Fonctionnement</h2>
-            <ol>
-                <li class="test">
-                    <span class="span">1</span>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
+            <ol class="functionning__list">
+                <li class="functionning__item">
+                    <span class="functionning__step">1</span>
+                    <i class="fa-solid fa-mobile-screen-button functionning__icon"></i>
+                    <p class="functionning__text">Choisissez un restaurant</p>
                 </li>
-                <li class="test">
-                    <span class="span">2</span>
-                    <i class="fa-solid fa-list"></i>
-                    <p>Composez votre menu</p>
+                <li class="functionning__item">
+                    <span class="functionning__step">2</span>
+                    <i class="fa-solid fa-list functionning__icon"></i>
+                    <p class="functionning__text">Composez votre menu</p>
                 </li>
-                <li class="test">
-                    <span class="span">3</span>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                <li class="functionning__item">
+                    <span class="functionning__step">3</span>
+                    <i class="fa-solid fa-store functionning__icon"></i>
+                    <p class="functionning__text">Dégustez au restaurant</p>
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurants-card">
                 <a href="#" class="card">
@@ -106,23 +106,27 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <h2>ohmyfood</h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-utensils"></i>
-                    <p>Proposer un restaurant</p>
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a href="#" class="footer__link">
+                    <i class="fa-solid fa-utensils footer__icon"></i>
+                    <p class="footer__text">Proposer un restaurant</p>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="footer__item">
+                <a href="#" class="footer__link">
                     <i class="fa-solid fa-handshake-angle"></i>
                     <p>Devenir partenaire</p>
                 </a>
             </li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li class="footer__item">
+                <p class="footer__text">Mentions légales</p>
+            </li>
+            <li class="footer__item">
+                <p class="footer__text">Contact</p>
+            </li>
         </ul>
     </footer>
 </body>
