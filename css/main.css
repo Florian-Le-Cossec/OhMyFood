@@ -1,1 +1,224 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  padding: 14px 0 13px 0;
+  box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.15);
+}
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+header h1 img {
+  height: 36px;
+  max-width: 197px;
+}
+
+.input-section {
+  padding: 15px 0;
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+}
+.input-section i {
+  color: #353535;
+}
+.input-section input {
+  padding: 0;
+  font-size: 16px;
+  background: #EAEAEA;
+  border: none;
+  max-width: 140px;
+  width: auto;
+}
+.input-section input::-moz-placeholder {
+  font-weight: 500;
+  color: #353535;
+}
+.input-section input::placeholder {
+  font-weight: 500;
+  color: #353535;
+}
+
+.btn-section {
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 55px;
+  align-items: center;
+}
+.btn-section__title {
+  max-width: 275px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.btn-section__text {
+  max-width: 315px;
+  margin: 0 0 27px 0;
+  color: #353535;
+  font-weight: 300;
+  font-size: 18px;
+}
+.btn-section__btn {
+  font-size: 16px;
+  border: none;
+  padding: 13px 19px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  font-weight: 500;
+}
+
+.functionning {
+  padding: 0 20px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.functionning h2 {
+  margin: 0;
+  padding-bottom: 25px;
+}
+.functionning__list {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 12px;
+}
+.functionning__item {
+  position: relative;
+  height: 72.4px;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  background: #F6F6F6;
+  margin-bottom: 25px;
+}
+.functionning__step {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%);
+  background-color: #9356DC;
+  color: #ffffff;
+}
+.functionning__icon {
+  display: inline-block;
+  align-self: center;
+  margin-left: 33.5px;
+}
+.functionning__text {
+  align-self: center;
+  margin-left: 27px;
+}
+
+.restaurants {
+  padding: 55px 20px 65px 20px;
+  background: #F6F6F6;
+}
+.restaurants h2 {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+.restaurants__cards {
+  width: 100%;
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: inherit;
+}
+.restaurants__content {
+  position: relative;
+}
+.restaurants__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 10px;
+  color: #008766;
+  background: #99E2D0;
+  text-align: center;
+  border-radius: 2px;
+}
+.restaurants__img {
+  border-radius: 15px 15px 0 0;
+  height: 230px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.restaurants__info {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px 15px 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants__text h2 {
+  margin-bottom: 5px;
+}
+.restaurants__text p {
+  margin: 0;
+}
+.restaurants .restaurants__like--default {
+  display: inline-block;
+}
+.restaurants .restaurants__like--hover {
+  display: none;
+}
+.restaurants .restaurants__like:hover .restaurants__like--default {
+  display: none;
+}
+.restaurants .restaurants__like:hover .restaurants__like--hover {
+  display: inline-block;
+}
+
+.footer {
+  padding: 22px 25px;
+  background: #353535;
+}
+.footer h2 {
+  color: #ffffff;
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+}
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+}
+.footer__link--bold {
+  font-weight: 500;
+}/*# sourceMappingURL=main.css.map */
