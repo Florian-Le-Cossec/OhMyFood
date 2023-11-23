@@ -1,3 +1,11 @@
+@keyframes heart-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -73,6 +81,7 @@ header h1 img {
   font-size: 18px;
 }
 .btn-section__btn {
+  cursor: pointer;
   font-size: 16px;
   border: none;
   padding: 13px 19px;
@@ -81,6 +90,11 @@ header h1 img {
   color: #ffffff;
   background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   font-weight: 500;
+  transition: all 0.3s;
+}
+.btn-section__btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .functionning {
@@ -105,6 +119,11 @@ header h1 img {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   background: #F6F6F6;
   margin-bottom: 25px;
+  transition: all 0.3s;
+}
+.functionning__item:hover {
+  box-shadow: 0px 4px 15px -7.5px #9356DC;
+  transform: scale(1.02);
 }
 .functionning__step {
   position: absolute;
@@ -151,6 +170,11 @@ header h1 img {
   background-color: #ffffff;
   text-decoration: none;
   color: inherit;
+  transition: all 0.3s;
+}
+.restaurants__card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 15px -7.5px #9356DC;
 }
 .restaurants__content {
   position: relative;
@@ -170,6 +194,8 @@ header h1 img {
   height: 230px;
   width: 100%;
   flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurants__info {
   display: flex;
@@ -184,17 +210,31 @@ header h1 img {
 .restaurants__text p {
   margin: 0;
 }
-.restaurants .restaurants__like--default {
-  display: inline-block;
+.restaurants .restaurants__like {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
-.restaurants .restaurants__like--hover {
+.restaurants .restaurants__like .fa-solid.fa-heart {
   display: none;
 }
-.restaurants .restaurants__like:hover .restaurants__like--default {
+.restaurants .restaurants__like:hover {
+  cursor: pointer;
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  animation: heart-fade 1s ease;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-fill-mode: forwards;
+}
+.restaurants .restaurants__like:hover .fa-regular.fa-heart {
   display: none;
 }
-.restaurants .restaurants__like:hover .restaurants__like--hover {
-  display: inline-block;
+.restaurants .restaurants__like:hover .fa-solid.fa-heart {
+  display: block;
 }
 
 .footer {
