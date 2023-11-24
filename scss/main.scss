@@ -1,11 +1,9 @@
 @import './config';
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
- margin: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Roboto', sans-serif;
 }
 
 // header
@@ -103,24 +101,28 @@ header {
     &__list {
         list-style-type: none;
         padding: 0;
-        padding-left: 12px;
+        @include media-lg {
+            display: flex;
+            gap: 2rem;
+        }
     }
 
     &__item {
         position: relative;
-        height: 72.4px;
+        padding: 0 33.5px;
         border-radius: 20px;
         display: flex;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         background: $background-color;
         margin-bottom: 25px;
         transition: all 0.3s;
-        
         &:hover{
             box-shadow: 0px 4px 15px -7.5px $primary-color;
             transform: scale(1.02);
         }
-
+        @include media-lg {
+           flex: 1;
+        }
     }
 
     &__step {
@@ -141,12 +143,16 @@ header {
     &__icon {
         display: inline-block;
         align-self: center;
-        margin-left: 33.5px;
     }
 
     &__text {
         align-self: center;
         margin-left: 27px;
+    }
+
+    @include media-lg {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 }
 
@@ -162,6 +168,14 @@ header {
 
     &__cards {
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 5rem;
+        row-gap: 2rem;
+
+        @include media-lg {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__card {
@@ -196,9 +210,8 @@ header {
     }
     &__img {
         border-radius: 15px 15px 0 0;
-        height: 230px;
+        height: 180px;
         width: 100%;
-        flex-shrink: 0;
         object-fit: cover;
     }
     &__info {
@@ -220,23 +233,53 @@ header {
     
     @include heart;
 
+    @include media-lg {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
 }
 
 
 .footer {
-    padding: 22px 25px;
+    padding: 30px 25px;
     background: $grey-color;
 
+    @include media-lg {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 30px 25px
+    }
     & h2{
         color: $white-color;
         font-family: $font-title;
         font-size: 18px;
         font-weight: 400;
+
+        @include media-lg {
+            align-self: end;
+            margin-left: 25px
+        }
     }
 
     &__list {
         list-style-type: none;
         padding: 0;
+
+        @include media-lg {
+            display: flex;
+            margin: 0;
+        }
+    }
+    
+    &__item {
+        @include media-lg {
+            margin-right: 25px;
+            &:nth-child(2) {
+                margin-right: 50px
+            }
+        }
     }
     
     &__link {
@@ -252,6 +295,3 @@ header {
         }
     }
 }
-
-
-
