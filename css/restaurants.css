@@ -1,0 +1,12 @@
+.food-img {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+}/*# sourceMappingURL=restaurants.css.map */
