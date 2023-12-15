@@ -28,8 +28,8 @@
     opacity: 1;
   }
   100% {
+    z-index: -1000;
     opacity: 0;
-    z-index: -100;
   }
 }
 @keyframes itemappear {
@@ -155,10 +155,10 @@ button:hover {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.9);
-  animation: loading 0.5s;
-  animation-delay: 3s;
+  z-index: 1000;
+  background: rgb(0, 0, 0);
+  animation: loading 1s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 .loader__content {
@@ -170,7 +170,7 @@ button:hover {
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
-  animation: spotlight 3.5s;
+  animation: spotlight 3s;
   animation-fill-mode: both;
 }
 .loader__title {
@@ -254,9 +254,8 @@ button:hover {
 }
 
 .functionning {
-  padding: 0 20px;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  background: #ffffff;
+  padding: 50px 20px 70px 20px;
 }
 .functionning h2 {
   margin: 0;

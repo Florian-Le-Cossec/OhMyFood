@@ -95,8 +95,8 @@ $font-title: 'Shrikhand', serif;
         opacity: 1;
     }
     100% {
+        z-index: -1000;
         opacity: 0;
-        z-index: -100;
     }
 }
 

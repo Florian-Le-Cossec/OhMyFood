@@ -5,10 +5,10 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.90);
-    animation: loading 0.5s;
-    animation-delay: 3s;
+    z-index: 1000;
+    background: rgba(0, 0, 0);
+    animation: loading 1s;
+    animation-delay: 2s;
     animation-fill-mode: both;
     
     &__content {
@@ -20,7 +20,7 @@
         flex-direction: column;
         row-gap: 30px;
         align-items: center;
-        animation: spotlight 3.5s;
+        animation: spotlight 3s;
         animation-fill-mode: both;
     }
 
@@ -106,9 +106,8 @@
 
 // functionning section
 .functionning {
-    padding: 0 20px;
-    margin-top: 50px ;
-    margin-bottom: 70px;
+    background: $white-color;
+    padding: 50px 20px 70px 20px;
     & h2 {
         margin: 0;
         padding-bottom: 25px;
