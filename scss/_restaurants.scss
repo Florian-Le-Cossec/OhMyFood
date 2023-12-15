@@ -48,7 +48,7 @@
             content: "";
             width: 40px;
             height: 3px;
-            background: $green-color;
+            background: $tertiary-color;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -104,7 +104,7 @@
         }
 
         &__confirmation {
-            background-color: $green-color;
+            background-color: $tertiary-color;
             margin: -1rem -5rem -1rem 1rem;
             width: 3.75rem;
             display: flex;
@@ -128,7 +128,7 @@
 
         &__icon {
             font-size: 14px;
-            color: $green-color;
+            color: $tertiary-color;
         }
     }
 }

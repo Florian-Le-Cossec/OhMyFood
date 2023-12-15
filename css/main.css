@@ -6,6 +6,32 @@
     opacity: 1;
   }
 }
+@keyframes rotation {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spotlight {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
 @keyframes itemappear {
   0% {
     transform: scale(0);
@@ -121,6 +147,59 @@ button {
 button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.9);
+  animation: loading 0.5s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+.loader__content {
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -25%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  animation: spotlight 3.5s;
+  animation-fill-mode: both;
+}
+.loader__title {
+  font-family: "Shrikhand", serif;
+  font-size: 50px;
+  color: #ffffff;
+}
+.loader__spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #9356DC;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader__spinner::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #FF79DA;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
 }
 
 .input-section {
