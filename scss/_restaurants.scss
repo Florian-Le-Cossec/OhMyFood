@@ -7,15 +7,18 @@
 }
 
 .menu {
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
     margin-top: -4rem;
     padding-bottom: 40px;
     border-radius: 2rem 2rem 0 0;
     background: $background-color ;
     z-index: 1;
     position: relative;
+
+    @include media-lg {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
 
     &__title {
         padding: 1rem 2rem 0 1rem;
